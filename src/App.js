@@ -11,20 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p> */}
-        {/* <div id='flex-container'>
-          <div className='colorSwatch'></div>
-          <div className='container'>
-            <button type='button' id='redder'>
-              Redder
-            </button>
-            <button type='button' id='bluer'>
-              Bluer
-            </button>
-            <button type='button' id='greener'>
-              Greener
-            </button>
-          </div>
-        </div> */}
+
         <ColorSwatch />
 
         <a
