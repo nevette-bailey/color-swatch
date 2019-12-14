@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ColorSwatch from './ColorSwatch';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p> */}
-        <div id='flex-container'>
+        {/* <div id='flex-container'>
           <div className='colorSwatch'></div>
           <div className='container'>
             <button type='button' id='redder'>
@@ -23,7 +24,8 @@ function App() {
               Greener
             </button>
           </div>
-        </div>
+        </div> */}
+        <ColorSwatch />
 
         <a
           className='App-link'
