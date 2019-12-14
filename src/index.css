@@ -22,9 +22,3 @@ code {
   display: flex;
   justify-content: space-evenly;
 }
-
-.colorSwatch {
-  background-color: red;
-  /* size: 400pt; */
-  padding: 100px;
-}

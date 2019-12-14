@@ -5,16 +5,16 @@ class ColorSwatch extends React.Component {
     super();
     this.state = {
       red: 0,
-      green: 255,
+      green: 0,
       blue: 0,
       style: {
         padding: '100px',
-        backgroundColor: `rgb(0, 255, 0)`,
+        backgroundColor: `rgb(0, 0, 0)`,
       },
     };
     this.handleClickRedder = this.handleClickRedder.bind(this);
     this.handleClickGreener = this.handleClickGreener.bind(this);
-
+    this.handleClickBluer = this.handleClickBluer.bind(this);
   }
 
   handleClickRedder(event) {
@@ -23,7 +23,6 @@ class ColorSwatch extends React.Component {
     let green = Math.floor(this.state.green * 0.9);
     let blue = Math.floor(this.state.blue * 0.9);
 
-    console.log('RED CLICKED', red, this.state);
     this.setState({
       red: red,
       green: green,
@@ -41,7 +40,23 @@ class ColorSwatch extends React.Component {
     let green = Math.floor(this.state.green * 0.9 + 0.1 * 255);
     let blue = Math.floor(this.state.blue * 0.9);
 
-    console.log('Green CLICKED', green, this.state);
+    this.setState({
+      red: red,
+      green: green,
+      blue: blue,
+      style: {
+        padding: '100px',
+        backgroundColor: `rgb(${red}, ${green}, ${blue})`,
+      },
+    });
+  }
+
+  handleClickBluer(event) {
+    event.preventDefault();
+    let red = Math.floor(this.state.red * 0.9);
+    let green = Math.floor(this.state.green * 0.9);
+    let blue = Math.floor(this.state.blue * 0.9 + 0.1 * 255);
+
     this.setState({
       red: red,
       green: green,
@@ -62,10 +77,13 @@ class ColorSwatch extends React.Component {
             <button type='button' id='redder' onClick={this.handleClickRedder}>
               Redder
             </button>
-            <button type='button' id='greener' onClick={this.handleClickGreener}>
+            <button
+              type='button'
+              id='greener'
+              onClick={this.handleClickGreener}>
               Greener
             </button>
-            <button type='button' id='bluer' onClick={this.handleClick}>
+            <button type='button' id='bluer' onClick={this.handleClickBluer}>
               Bluer
             </button>
           </div>
