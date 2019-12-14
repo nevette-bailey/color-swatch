@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #c9cbcf;
+  background-color: smoke;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
 }
 
 .button {
-  padding: 10px 25px;
+  padding: 20px 45px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   background: transparent;
@@ -24,6 +24,7 @@
   position: relative;
   display: inline-block;
   margin: 20px;
+  font-size: 20px;
 }
 
 .button {

@@ -8,7 +8,7 @@ class ColorSwatch extends React.Component {
       green: 0,
       blue: 0,
       style: {
-        padding: '100px',
+        padding: '200px',
         backgroundColor: `rgb(0, 0, 0)`,
       },
     };
@@ -28,7 +28,7 @@ class ColorSwatch extends React.Component {
       green: green,
       blue: blue,
       style: {
-        padding: '100px',
+        padding: '200px',
         backgroundColor: `rgb(${red}, ${green}, ${blue})`,
       },
     });
@@ -45,7 +45,7 @@ class ColorSwatch extends React.Component {
       green: green,
       blue: blue,
       style: {
-        padding: '100px',
+        padding: '200px',
         backgroundColor: `rgb(${red}, ${green}, ${blue})`,
       },
     });
@@ -62,7 +62,7 @@ class ColorSwatch extends React.Component {
       green: green,
       blue: blue,
       style: {
-        padding: '100px',
+        padding: '200px',
         backgroundColor: `rgb(${red}, ${green}, ${blue})`,
       },
     });
