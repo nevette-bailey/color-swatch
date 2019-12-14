@@ -13,6 +13,8 @@ class ColorSwatch extends React.Component {
       },
     };
     this.handleClickRedder = this.handleClickRedder.bind(this);
+    this.handleClickGreener = this.handleClickGreener.bind(this);
+
   }
 
   handleClickRedder(event) {
@@ -33,6 +35,24 @@ class ColorSwatch extends React.Component {
     });
   }
 
+  handleClickGreener(event) {
+    event.preventDefault();
+    let red = Math.floor(this.state.red * 0.9);
+    let green = Math.floor(this.state.green * 0.9 + 0.1 * 255);
+    let blue = Math.floor(this.state.blue * 0.9);
+
+    console.log('Green CLICKED', green, this.state);
+    this.setState({
+      red: red,
+      green: green,
+      blue: blue,
+      style: {
+        padding: '100px',
+        backgroundColor: `rgb(${red}, ${green}, ${blue})`,
+      },
+    });
+  }
+
   render() {
     return (
       <div>
@@ -42,11 +62,11 @@ class ColorSwatch extends React.Component {
             <button type='button' id='redder' onClick={this.handleClickRedder}>
               Redder
             </button>
+            <button type='button' id='greener' onClick={this.handleClickGreener}>
+              Greener
+            </button>
             <button type='button' id='bluer' onClick={this.handleClick}>
               Bluer
-            </button>
-            <button type='button' id='greener' onClick={this.handleClick}>
-              Greener
             </button>
           </div>
         </div>
