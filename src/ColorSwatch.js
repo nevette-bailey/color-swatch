@@ -74,16 +74,25 @@ class ColorSwatch extends React.Component {
         <div id='flex-container'>
           <div className='colorSwatch' style={this.state.style}></div>
           <div className='container'>
-            <button type='button' id='redder' onClick={this.handleClickRedder}>
+            <button
+              type='button'
+              className='button'
+              id='redder'
+              onClick={this.handleClickRedder}>
               Redder
             </button>
             <button
               type='button'
+              className='button'
               id='greener'
               onClick={this.handleClickGreener}>
               Greener
             </button>
-            <button type='button' id='bluer' onClick={this.handleClickBluer}>
+            <button
+              type='button'
+              className='button'
+              id='bluer'
+              onClick={this.handleClickBluer}>
               Bluer
             </button>
           </div>
