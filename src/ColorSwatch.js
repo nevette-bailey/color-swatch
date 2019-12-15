@@ -4,34 +4,29 @@ class ColorSwatch extends React.Component {
   constructor() {
     super();
     this.state = {
-      red: 0,
-      green: 0,
-      blue: 0,
-      style: {
-        padding: '200px',
-        backgroundColor: `rgb(0, 0, 0)`,
-      },
+      red: 255,
+      green: 255,
+      blue: 255,
     };
     this.handleClickRedder = this.handleClickRedder.bind(this);
     this.handleClickGreener = this.handleClickGreener.bind(this);
     this.handleClickBluer = this.handleClickBluer.bind(this);
   }
 
+  setTheState(red, green, blue) {
+    this.setState({
+      red: red,
+      green: green,
+      blue: blue,
+    });
+  }
   handleClickRedder(event) {
     event.preventDefault();
     let red = Math.floor(this.state.red * 0.9 + 0.1 * 255);
     let green = Math.floor(this.state.green * 0.9);
     let blue = Math.floor(this.state.blue * 0.9);
 
-    this.setState({
-      red: red,
-      green: green,
-      blue: blue,
-      style: {
-        padding: '200px',
-        backgroundColor: `rgb(${red}, ${green}, ${blue})`,
-      },
-    });
+    this.setTheState(red, green, blue);
   }
 
   handleClickGreener(event) {
@@ -40,15 +35,7 @@ class ColorSwatch extends React.Component {
     let green = Math.floor(this.state.green * 0.9 + 0.1 * 255);
     let blue = Math.floor(this.state.blue * 0.9);
 
-    this.setState({
-      red: red,
-      green: green,
-      blue: blue,
-      style: {
-        padding: '200px',
-        backgroundColor: `rgb(${red}, ${green}, ${blue})`,
-      },
-    });
+    this.setTheState(red, green, blue);
   }
 
   handleClickBluer(event) {
@@ -57,22 +44,19 @@ class ColorSwatch extends React.Component {
     let green = Math.floor(this.state.green * 0.9);
     let blue = Math.floor(this.state.blue * 0.9 + 0.1 * 255);
 
-    this.setState({
-      red: red,
-      green: green,
-      blue: blue,
-      style: {
-        padding: '200px',
-        backgroundColor: `rgb(${red}, ${green}, ${blue})`,
-      },
-    });
+    this.setTheState(red, green, blue);
   }
 
   render() {
+    const style = {
+      padding: '200px',
+      backgroundColor: `rgb(${this.state.red}, ${this.state.green}, ${this.state.blue})`,
+      border: '1px solid black',
+    };
     return (
       <div>
         <div id='flex-container'>
-          <div className='colorSwatch' style={this.state.style}></div>
+          <div className='colorSwatch' style={style}></div>
           <div className='container'>
             <button
               type='button'
